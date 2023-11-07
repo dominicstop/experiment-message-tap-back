@@ -15,7 +15,21 @@ extension ModalManager: UIViewControllerAnimatedTransitioning {
   };
   
   func animateTransition(using transitionContext: UIViewControllerContextTransitioning) {
-    // WIPP
+    guard let presentationState = self.presentationState,
+          let fromVC = transitionContext.viewController(forKey: .from)
+    else { return };
+    
+    switch presentationState {
+      case .presenting:
+        let containerView = transitionContext.containerView;
+        self.modalRootView = containerView;
+        
+        self.setupViews();
+        transitionContext.completeTransition(true);
+        
+      case .dismissing:
+        break;
+    };
   };
 };
 
