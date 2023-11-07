@@ -7,12 +7,35 @@
 
 import UIKit
 
+class ModaWrappertViewController: UIViewController {
+  override func viewDidLoad() {
+    super.viewDidLoad();
+    
+    self.view.backgroundColor = .clear;
+  };
+};
+
 class ModalManager: NSObject {
+
+  // MARK: - Embedded Types
+  // ----------------------
+  
+  enum PresentationState {
+    case presenting;
+    case dismissing;
+  };
+  
+  // MARK: - Properties
+  // ------------------
 
   weak var presentingVC: UIViewController?;
   weak var targetView: UIView?;
+
   
+  var modalWrapperVC: ModaWrappertViewController?;
   var presentedVC: UIViewController?;
+  
+  var presentationState: PresentationState?;
 
   override init() {
     super.init();
@@ -28,9 +51,18 @@ class ModalManager: NSObject {
     self.presentingVC = presentingVC;
     self.targetView = targetView;
     
-    presentedVC.modalPresentationStyle = .custom;
-    presentedVC.transitioningDelegate = self;
+    let modalWrapperVC = ModaWrappertViewController();
+    self.modalWrapperVC = modalWrapperVC;
     
-    presentingVC.present(presentedVC, animated: true);
+    
+    modalWrapperVC.addChild(presentedVC);
+    modalWrapperVC.didMove(toParent: presentedVC);
+    
+    modalWrapperVC.modalPresentationStyle = .custom;
+    modalWrapperVC.transitioningDelegate = self;
+    
+    self.presentationState = .presenting;
+    
+    presentingVC.present(modalWrapperVC, animated: true);
   };
 };
