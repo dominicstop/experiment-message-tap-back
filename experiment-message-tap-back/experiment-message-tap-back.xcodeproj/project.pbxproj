@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		883409D42AFA57510095B82D /* ModalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883409D32AFA57510095B82D /* ModalManager.swift */; };
 		889B47C32AF97FC8006EB779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B47C22AF97FC8006EB779 /* AppDelegate.swift */; };
 		889B47C52AF97FC8006EB779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B47C42AF97FC8006EB779 /* SceneDelegate.swift */; };
 		889B47CC2AF97FCA006EB779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889B47CB2AF97FCA006EB779 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		883409D32AFA57510095B82D /* ModalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalManager.swift; sourceTree = "<group>"; };
 		889B47BF2AF97FC8006EB779 /* experiment-message-tap-back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment-message-tap-back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		889B47C22AF97FC8006EB779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889B47C42AF97FC8006EB779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,9 +41,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		883409D22AFA573D0095B82D /* ModalManager */ = {
+			isa = PBXGroup;
+			children = (
+				883409D32AFA57510095B82D /* ModalManager.swift */,
+			);
+			path = ModalManager;
+			sourceTree = "<group>";
+		};
 		889B47B62AF97FC8006EB779 = {
 			isa = PBXGroup;
 			children = (
+				883409D22AFA573D0095B82D /* ModalManager */,
 				889B47D62AF98219006EB779 /* Screens */,
 				889B47C12AF97FC8006EB779 /* experiment-message-tap-back */,
 				889B47C02AF97FC8006EB779 /* Products */,
@@ -153,6 +164,7 @@
 				889B47DA2AF98258006EB779 /* Route.swift in Sources */,
 				889B47C32AF97FC8006EB779 /* AppDelegate.swift in Sources */,
 				889B47C52AF97FC8006EB779 /* SceneDelegate.swift in Sources */,
+				883409D42AFA57510095B82D /* ModalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +316,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -332,6 +345,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
