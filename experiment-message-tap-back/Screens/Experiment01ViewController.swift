@@ -6,9 +6,31 @@
 //
 
 import UIKit
+import MessageUI
+
+fileprivate class AuxiliaryViewController: UIViewController {
+
+  init() {
+    super.init(nibName: nil, bundle: nil);
+    self.preferredContentSize = .init(width: 125, height: 75);
+  };
+  
+  required init?(coder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  };
+  
+  override func viewDidLoad() {
+    super.viewDidLoad();
+    
+    self.view.backgroundColor = .white;
+    self.view.layer.cornerRadius = 12;
+  };
+};
 
 
 class Experiment01ViewController: UIViewController {
+
+  var boxView: UIView?;
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -48,6 +70,8 @@ class Experiment01ViewController: UIViewController {
       return view;
     }();
     
+    self.boxView = box;
+    
     box.translatesAutoresizingMaskIntoConstraints = false;
     stackView.addArrangedSubview(box);
     
@@ -55,6 +79,24 @@ class Experiment01ViewController: UIViewController {
       box.widthAnchor.constraint(equalToConstant: 200),
       box.heightAnchor.constraint(equalToConstant: 100),
     ]);
+    
+    let button: UIView = {
+      let button = UIButton(frame: .zero);
+      button.setTitle("Show Context Menu", for: .normal);
+      
+      if #available(iOS 15.0, *) {
+        button.configuration = .filled()
+      };
+      
+      button.addTarget(self,
+        action: #selector(Self.handleButtonPress(_:)),
+        for: .touchUpInside
+      );
+      
+      return button;
+    }();
+    
+    stackView.addArrangedSubview(button);
     
     for index in itemCountMid...itemCount {
       let label = UILabel();
@@ -104,4 +146,19 @@ class Experiment01ViewController: UIViewController {
       scrollView.trailingAnchor.constraint(equalTo: self.view.trailingAnchor),
     ]);
   };
+  
+  @objc func handleButtonPress(_ sender: UIButton){
+    guard let boxView = self.boxView else { return };
+  
+    let manager = ModalManager();
+    let auxVC = AuxiliaryViewController();
+    
+    manager.present(
+      viewControllerToPresent: auxVC,
+      presentingViewController: self,
+      targetView: boxView
+    );
+  };
 };
+
+  
