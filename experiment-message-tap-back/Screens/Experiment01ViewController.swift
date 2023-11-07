@@ -22,7 +22,7 @@ fileprivate class AuxiliaryViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad();
     
-    self.view.backgroundColor = .white;
+    self.view.backgroundColor = .blue;
     self.view.layer.cornerRadius = 12;
   };
 };
@@ -82,7 +82,7 @@ class Experiment01ViewController: UIViewController {
     
     let button: UIView = {
       let button = UIButton(frame: .zero);
-      button.setTitle("Show Context Menu", for: .normal);
+      button.setTitle("Show Modal", for: .normal);
       
       if #available(iOS 15.0, *) {
         button.configuration = .filled()
