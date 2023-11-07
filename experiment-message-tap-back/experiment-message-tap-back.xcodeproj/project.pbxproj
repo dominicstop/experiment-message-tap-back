@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		883409D42AFA57510095B82D /* ModalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883409D32AFA57510095B82D /* ModalManager.swift */; };
+		883409D62AFA5EDF0095B82D /* ModalManager+UIViewControllerAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883409D52AFA5EDF0095B82D /* ModalManager+UIViewControllerAnimatedTransitioning.swift */; };
+		883409D82AFA5F6E0095B82D /* ModalManager+UIAdaptivePresentationControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883409D72AFA5F6E0095B82D /* ModalManager+UIAdaptivePresentationControllerDelegate.swift */; };
+		883409DA2AFA5FA90095B82D /* ModalManager+UIViewControllerTransitioningDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 883409D92AFA5FA90095B82D /* ModalManager+UIViewControllerTransitioningDelegate.swift */; };
 		889B47C32AF97FC8006EB779 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B47C22AF97FC8006EB779 /* AppDelegate.swift */; };
 		889B47C52AF97FC8006EB779 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889B47C42AF97FC8006EB779 /* SceneDelegate.swift */; };
 		889B47CC2AF97FCA006EB779 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 889B47CB2AF97FCA006EB779 /* Assets.xcassets */; };
@@ -19,6 +22,9 @@
 
 /* Begin PBXFileReference section */
 		883409D32AFA57510095B82D /* ModalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalManager.swift; sourceTree = "<group>"; };
+		883409D52AFA5EDF0095B82D /* ModalManager+UIViewControllerAnimatedTransitioning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModalManager+UIViewControllerAnimatedTransitioning.swift"; sourceTree = "<group>"; };
+		883409D72AFA5F6E0095B82D /* ModalManager+UIAdaptivePresentationControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModalManager+UIAdaptivePresentationControllerDelegate.swift"; sourceTree = "<group>"; };
+		883409D92AFA5FA90095B82D /* ModalManager+UIViewControllerTransitioningDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ModalManager+UIViewControllerTransitioningDelegate.swift"; sourceTree = "<group>"; };
 		889B47BF2AF97FC8006EB779 /* experiment-message-tap-back.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "experiment-message-tap-back.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		889B47C22AF97FC8006EB779 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		889B47C42AF97FC8006EB779 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +51,9 @@
 			isa = PBXGroup;
 			children = (
 				883409D32AFA57510095B82D /* ModalManager.swift */,
+				883409D52AFA5EDF0095B82D /* ModalManager+UIViewControllerAnimatedTransitioning.swift */,
+				883409D72AFA5F6E0095B82D /* ModalManager+UIAdaptivePresentationControllerDelegate.swift */,
+				883409D92AFA5FA90095B82D /* ModalManager+UIViewControllerTransitioningDelegate.swift */,
 			);
 			path = ModalManager;
 			sourceTree = "<group>";
@@ -159,11 +168,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				883409D82AFA5F6E0095B82D /* ModalManager+UIAdaptivePresentationControllerDelegate.swift in Sources */,
 				889B47DC2AF982F5006EB779 /* RouteManager.swift in Sources */,
 				889B47D82AF98245006EB779 /* Experiment01ViewController.swift in Sources */,
 				889B47DA2AF98258006EB779 /* Route.swift in Sources */,
+				883409DA2AFA5FA90095B82D /* ModalManager+UIViewControllerTransitioningDelegate.swift in Sources */,
 				889B47C32AF97FC8006EB779 /* AppDelegate.swift in Sources */,
 				889B47C52AF97FC8006EB779 /* SceneDelegate.swift in Sources */,
+				883409D62AFA5EDF0095B82D /* ModalManager+UIViewControllerAnimatedTransitioning.swift in Sources */,
 				883409D42AFA57510095B82D /* ModalManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

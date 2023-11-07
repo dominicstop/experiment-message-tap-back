@@ -7,15 +7,15 @@
 
 import UIKit
 
-class ModalManager {
+class ModalManager: NSObject {
 
   weak var presentingVC: UIViewController?;
   weak var targetView: UIView?;
   
   var presentedVC: UIViewController?;
 
-  init() {
-    // no-op
+  override init() {
+    super.init();
   };
   
   func present(
@@ -27,6 +27,9 @@ class ModalManager {
     self.presentedVC = presentedVC;
     self.presentingVC = presentingVC;
     self.targetView = targetView;
+    
+    presentedVC.modalPresentationStyle = .custom;
+    presentedVC.transitioningDelegate = self;
     
     presentingVC.present(presentedVC, animated: true);
   };
